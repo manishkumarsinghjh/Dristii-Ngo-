@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <LINK rel="stylesheet" href="style.css">
+</head>
+<body>
+     <nav class="navbar">
+      <div class="logo">
+        <div class="logo-container">
+          <img
+            class="logo"
+            src="Files/logo2.png"
+            width="100"
+            height="60"
+            alt="Logo"
+          />
+        </div>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#ms">Main Events</a></li>
+        
+        <li><a href="home.html#ms">Media</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="#footer-section">About</a></li>
+      </ul>
+    </nav>
+
+    
+    <!-- Media Coverage Section -->
+<section class="media-section" id="media">
+  <h2 class="media-title">Media Coverage</h2>
+  <div class="media-grid">
+   <!-- Example media card -->
+<div class="media-card">
+  <img src="i1.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Diwali Celebration<br></div>
+</div>
+    <div class="media-card">
+  <img src="i2.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">StreetBuzz News<br></div>
+</div>
+<div class="media-card">
+  <img src="i3.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Thand Ka Tohfa<br></div>
+</div>
+<div class="media-card">
+  <img src="i4.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Rain Guard Initiatives<br></div>
+</div>
+  <div class="media-card">
+  <img src="i5.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Disease Prevention<br></div>
+</div>
+<div class="media-card">
+  <img src="i6.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Painting Competition<br></div>
+</div>
+<div class="media-card">
+  <img src="i7.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Malaria Prevention<br></div>
+</div>
+<div class="media-card">
+  <img src="i8.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Handgloves Distribution<br></div>
+</div>
+<div class="media-card">
+  <img src="i9.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Handgloves Distribution<br></div>
+</div>
+<div class="media-card">
+  <img src="i11.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Handgloves Distribution<br></div>
+</div>
+<div class="media-card">
+  <img src="i12.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Blanket Distribution<br></div>
+</div>
+<div class="media-card">
+  <img src="i13.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Thand ka Tohfa<br></div>
+</div>
+<div class="media-card">
+  <img src="i14.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">News 7 Air<br></div>
+</div>
+<div class="media-card">
+  <img src="i15.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">A Squared<br></div>
+</div>
+
+<div class="media-card">
+  <img src="i17.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Naari Inspire<br></div>
+</div>
+<div class="media-card">
+  <img src="i18.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Holi Celebration<br></div>
+</div>
+<div class="media-card">
+  <img src="i19.jpg" alt="Newspaper 1" class="media-img" onclick="openModal(this.src, this.alt)" />
+  <div class="media-caption">Naari Inspire<br></div>
+</div>
+ <!-- Add more media-card blocks as needed -->
+  </div>
+  <!-- Modal for full image view -->
+<div id="mediaModal" class="media-modal" onclick="closeModal()">
+  <span class="media-modal-close" onclick="closeModal()">&times;</span>
+  <img class="media-modal-content" id="mediaModalImg" alt="">
+  <div id="mediaModalCaption" class="media-modal-caption"></div>
+</div>
+<script>
+function openModal(src, alt) {
+  var modal = document.getElementById('mediaModal');
+  var modalImg = document.getElementById('mediaModalImg');
+  var caption = document.getElementById('mediaModalCaption');
+  modal.style.display = "flex";
+  modalImg.src = src;
+  caption.innerText = alt;
+}
+function closeModal() {
+  document.getElementById('mediaModal').style.display = "none";
+}
+window.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") closeModal();
+});
+</script>
+  <!-- Example media card -->
+ <footer class="footer-section" id="footer-section">
+      <div class="footer-container">
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:dristingo.lalpur@gmail.com">dristingo.lalpur@gmail.com</a></p>
+          <p>Phone: <a href="tel:+91 7294146446">+91 7294146446</a></p>
+          <p>Bit Mesra, Ranchi, India</p>
+        </div>
+        <div class="footer-social">
+          <a 
+            href="https://wa.me/917294146446" 
+            class="whatsapp-btn" 
+            target="_blank" 
+            rel="noopener"
+            aria-label="Chat on WhatsApp"
+          >
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+            Chat with us
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Dristi. All rights reserved.
+      </div>
+    </footer>
+
+</body>
+</html>
